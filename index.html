@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>秀琼的小猫咪❤️</title>
+    <title>雨婷的小猫咪❤️</title>
 
     <script type='text/javascript' src='https://cdn.bootcss.com/three.js/r75/three.min.js'></script>
     <script type='text/javascript' src='./js/TweenMax.min.js'></script>
@@ -41,10 +41,36 @@
       #credits a:hover {
       color:#630d15;
       }
+    /* 文案 */
+		.neon{
+		    width: 100vw;
+		    font-family: "Microsoft YaHei";
+        padding-top: 5rem;
+		    font-size: 3rem;
+		    text-align: center;
+		    background: -webkit-linear-gradient(left, rgb(74, 228, 74), rgb(226, 72, 240)) 0 0 no-repeat;/*设置线性渐变*/
+		    -webkit-background-size: 160px;                        /*设置背景大小*/
+		    -webkit-background-clip: text;                            /*背景被裁剪到文字*/
+		    -webkit-text-fill-color: rgba(255, 255, 255, 0.01);        /*设置文字的填充颜色*/
+		    -webkit-animation: shine 15s infinite;                    /*设置动画*/
+		}
+		@-webkit-keyframes shine{   /*创建动画*/
+		    0%{
+		        background-position: 0 0;
+		    }
+		    100%{
+		        background-position: 100% 100%;
+		    }
+		}
+    @media screen and (max-width: 1025px) {
+      .neon{font-size: 1rem;-webkit-animation: shine 5s infinite;-webkit-background-size: 100px; }
+    } 
     </style>
 </head>
 <body>
-    <div id="world"></div>
+    <div id="world">
+      <p class="neon">日长睡起无情思，闲看雨婷逗猫咪</p>
+    </div>
 </body>
 <script>
 //THREEJS RELATED VARIABLES 
